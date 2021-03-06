@@ -7,8 +7,12 @@ This repo contains a collection of Jupyter notebooks focused on infosec and anyt
 ### Docker
 
 ```
-docker run -d -it $(pwd):/home/jovyan -p 8888:8888 jupyter/scipy-notebook
+docker run -it -v $(pwd):/home/jovyan -p 8888:8888 jupyter/scipy-notebook
 ```
+
+### Binder
+
+This repo has been set up to be launched via Binder. A list of notebooks supported can be found below.
 
 ## Collection
 
@@ -16,3 +20,4 @@ docker run -d -it $(pwd):/home/jovyan -p 8888:8888 jupyter/scipy-notebook
 
 This notebook is designed to be provided with a Cobalt Strike beacon payload, and it will output the embedded configuration.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xpn/jupyter/HEAD?filepath=notebooks%2Fbeacon_analysis.ipynb)
