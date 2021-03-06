@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ipywidgets = "7.6.3"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
