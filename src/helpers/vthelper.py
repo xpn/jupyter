@@ -1,5 +1,7 @@
 import vt
 import os
+import os.path
+from os import path
 
 class VirusTotal:
     def __init__(self, apikey, limit=50):
@@ -16,6 +18,12 @@ class VirusTotal:
                 yield obj
 
     def downloadSearchResults(self, searchquery, targetdir):
+        if not path.exists(targetdir):
+            try:
+                os.mkdir(targetdir)
+            except:
+                return
+                
         with vt.Client(self.apikey) as client:
             for result in self.getSearchResults(searchquery):
                 file_path = os.path.join(targetdir, result.sha256)
