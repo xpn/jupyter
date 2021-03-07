@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 ipywidgets = "7.6.3"
 pandas = "*"
+vt-py = "*"
+oletools = "*"
 
 [dev-packages]
 

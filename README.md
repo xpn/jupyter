@@ -21,3 +21,9 @@ This repo has been set up to be launched via Binder. A list of notebooks support
 This notebook is designed to be provided with a Cobalt Strike beacon payload, and it will output the embedded configuration.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xpn/jupyter/HEAD?filepath=notebooks%2Fbeacon_analysis.ipynb)
+
+### VT VBA Analysis
+
+This notebook is used to download a list of samples from VirusTotal, and using OleTools, extract the embedded VBA src from each.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xpn/jupyter/HEAD?filepath=notebooks%2Fvirustotal_vba_analysis.ipynb)

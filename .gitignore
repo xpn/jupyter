@@ -3,3 +3,6 @@
 .local
 .ipython
 .ipynb_checkpoints
+.cache
+.jupyter
+.*
