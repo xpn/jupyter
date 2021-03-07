@@ -7,7 +7,8 @@ This repo contains a collection of Jupyter notebooks focused on infosec and anyt
 ### Docker
 
 ```
-docker run -it -v $(pwd):/home/jovyan -p 8888:8888 jupyter/scipy-notebook
+docker build . -t xpn/scipy-notebook
+docker run -it -v $(pwd):/home/jovyan -p 8888:8888 xpn/scipy-notebook
 ```
 
 ### Binder
