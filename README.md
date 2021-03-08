@@ -28,3 +28,9 @@ This notebook is designed to be provided with a Cobalt Strike beacon payload, an
 This notebook is used to download a list of samples from VirusTotal, and using OleTools, extract the embedded VBA src from each.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xpn/jupyter/HEAD?filepath=notebooks%2Fvirustotal_vba_analysis.ipynb)
+
+### Yara Playground
+
+This notebook takes prevous samples (for example, from VT VBA Analysis) and allows us to play around with running/crafting Yara rules to match.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xpn/jupyter/HEAD?filepath=notebooks%2Fyara_playground.ipynb)
