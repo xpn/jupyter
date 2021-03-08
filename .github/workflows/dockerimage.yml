@@ -1,0 +1,24 @@
+name: Docker registry
+on: [push]
+jobs:
+  github:
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Login to github registry
+        uses: actions-hub/docker/login@master
+        env:
+          DOCKER_USERNAME: ${{ github.actor }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          DOCKER_REGISTRY_URL: docker.pkg.github.com
+
+      - name: Build :latest
+        if: success()
+        run: docker build -t docker.pkg.github.com/${{ github.repository }}/jupyter:latest .
+        
+      - name: Push to packages :latest
+        if: success()
+        uses: actions-hub/docker@master
+        with:
+          args: push docker.pkg.github.com/${{ github.repository }}/jupyter:latest
