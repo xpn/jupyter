@@ -8,6 +8,8 @@ ipywidgets = "7.6.3"
 pandas = "*"
 vt-py = "*"
 oletools = "*"
+yara-python = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

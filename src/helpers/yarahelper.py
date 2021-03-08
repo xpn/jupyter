@@ -19,7 +19,7 @@ class YaraMatch:
         return matches
 
 if __name__ == "__main__":
-    y = YaraMatch("/tmp/rules")
+    y = YaraMatch.usingYaraDir("/tmp/rules")
     y.getAllMatches("/tmp/test")
 
     y = YaraMatch.usingYaraString('rule dummy { condition: true }')
