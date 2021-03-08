@@ -6,9 +6,23 @@ This repo contains a collection of Jupyter notebooks focused on infosec and anyt
 
 ### Docker
 
+As this repo will use a bunch of pips, I've added a `Dockerfile` to make running the notebooks a bit easier. To build this yourself:
+
 ```
-docker build . -t xpn/scipy-notebook
-docker run -it -v $(pwd):/home/jovyan -p 8888:8888 xpn/scipy-notebook
+docker build . -t xpn/jupyter
+```
+
+Alternatively, there is a pre-built image which you can grab using:
+
+```
+docker pull docker.pkg.github.com/xpn/jupyter/jupyter:latest
+```
+
+Once built, you can then start your notebook server using:
+
+```
+git clone https://github.com/xpn/jupyter.git jupyter
+docker run -it -v $(pwd)/jupyter:/home/jovyan -p 8888:8888 xpn/jupyter
 ```
 
 ### Binder
