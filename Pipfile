@@ -10,6 +10,7 @@ vt-py = "*"
 oletools = "*"
 yara-python = "*"
 python-dotenv = "*"
+pefile = "*"
 
 [dev-packages]
 
